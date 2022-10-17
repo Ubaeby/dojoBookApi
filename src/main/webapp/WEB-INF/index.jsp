@@ -10,20 +10,36 @@
 </head>
 <body>
 
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Title</th>
+				<th>Language</th>
+				<th>Number of Pages</th>
+			</tr>
+		</thead>
 
-	<h1>
-		<c:out value="${book.title}"></c:out>
-	</h1>
+		<tbody>
+			<c:forEach var="allBooks" items="${books}">
+				<tr>
 
-	<p>
-		Description: <c:out value="${book.description}"></c:out>
-	</p>
-	<p>
-		Language: <c:out value="${book.language}"></c:out>
-	</p>
-	<p>
-		Pages: <c:out value="${book.numberOfPages}"></c:out>
-	</p>
+					<td><c:out value="${allBooks.id}"></c:out></td>
+					<td><a href="/books/${allBooks.id}"><c:out
+								value="${allBooks.title}"></c:out></a></td>
+					<td><c:out value="${allBooks.language}"></c:out></td>
+					<td><c:out value="${allBooks.numberOfPages}"></c:out></td>
+
+				</tr>
+			</c:forEach>
+		</tbody>
+
+	</table>
+
+
+
+
+
 
 
 </body>
