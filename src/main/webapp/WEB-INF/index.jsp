@@ -38,7 +38,7 @@
 
 
 
-
+	<a href="/books/new">Make a new book</a>
 
 
 
